@@ -1,0 +1,181 @@
+@import './public_variable.less';
+
+// 查重结果
+.paper_check {
+  height       : calc(100% - 20px);
+  padding      : 15px;
+  border-radius: 5px;
+  background   : #fff;
+
+  .showBox {
+    height     : 100%;
+    position   : relative;
+
+    .paper_res_content {
+      width          : 100%;
+      display        : flex;
+      font-size: 15px;
+      justify-content: space-between;
+
+      .originalTextBox,
+      .similarSourceBox {
+        width: 50%;
+      }
+
+      .originalTextBox {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+        box-sizing    : border-box;
+
+        .title {
+          width        : 100%;
+          margin-bottom: 5px;
+          flex         : 0 0 auto;
+
+          .value {
+            font-size: 17px;
+          }
+
+          .title_text {
+            font-size  : 18px;
+            font-weight: bold;
+          }
+
+          .similarity_degree {
+            margin-left: 20px;
+
+            .value {
+              color: red;
+            }
+          }
+
+          .word_number {
+            margin-left: 20px;
+          }
+
+          >span:last-child {
+            float    : right;
+            font-size: 16px;
+
+            .red {
+              color: red;
+            }
+          }
+
+          >span:last-child:after {
+            content: "";
+            display: block;
+            height : 0;
+          }
+        }
+
+        .content {
+          overflow-y : auto;
+          width      : 100%;
+          flex       : 1 0 auto;
+          padding    : 10px;
+          box-sizing : border-box;
+          border     : 1px solid rgb(219, 219, 219);
+          line-height: 1.8rem;
+
+          .br {
+            display      : block;
+            margin-bottom: 10px;
+          }
+
+          #test {
+            height    : 800px;
+            box-sizing: border-box;
+            border    : 2px solid yellow;
+          }
+        }
+      }
+
+      .similarSourceBox {
+        height        : 100%;
+        padding-left  : 10px;
+        display       : flex;
+        line-height: 1.5rem;
+        align-items   : center;
+        flex-direction: column;
+
+        .title {
+          width        : 100%;
+          margin-bottom: 5px;
+
+          .title_text {
+            text-align : right;
+            font-size  : 18px;
+            font-weight: bold;
+          }
+        }
+
+        .repeatParagraphs {
+          width        : 100%;
+          min-height   : 100px;
+          margin-bottom: 15px;
+          padding      : 10px;
+          background   : @admin_background_color;
+          box-sizing   : border-box;
+        }
+
+        .one {
+          background: rgba(243, 242, 250, 0.5);
+        }
+
+        // 相似源盒子
+        .paragraphContent_box {
+          .paragraphContent {
+            padding-bottom: 5px;
+            border-bottom : 3px solid #fff;
+            margin-bottom: 15px;
+
+            >div:first-child {
+              font-size  : 16px;
+              font-weight: bold;
+            }
+
+            .content {
+              margin: 10px 0;
+            }
+            div:last-child span {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      // 重复的段落
+      .duplicateSection {
+        color : red;
+        cursor: pointer;
+      }
+
+      .duplicateSection:hover {
+        text-decoration: yellow;
+      }
+    }
+
+    // 显示加载状态
+    .loadingBox {
+      position  : absolute;
+      top       : 0;
+      left      : 0;
+      width     : 100%;
+      height    : 100%;
+      background: #ffffff;
+      z-index   : 9;
+
+      .content {
+        height         : 100%;
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        font-size: 25px;
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,21 @@
+.thesis_title_box .card {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.thesis_title_box .release_thesis > input,
+.thesis_title_box .release_thesis .time_box {
+  width: 200px;
+  float: left;
+  margin-right: 20px;
+}
+.thesis_title_box .release_thesis > button {
+  float: left;
+  margin-right: 15px;
+}
+.thesis_title_box .page_bar {
+  text-align: right;
+  margin-top: 20px;
+}
+.thesis_title_box .page_bar .pagination {
+  margin-right: -8px;
+}

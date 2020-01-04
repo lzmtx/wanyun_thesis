@@ -1,0 +1,7 @@
+.footer_content_box {
+  width: calc(-120%);
+}
+.footer_content_box span {
+  font-weight: bold;
+  color: #ffffff;
+}

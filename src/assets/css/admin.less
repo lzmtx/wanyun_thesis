@@ -1,0 +1,137 @@
+@import './public_variable.less';
+
+#admin_root {
+  width          : 100%;
+  height         : 100vh;
+  box-sizing     : border-box;
+  min-width      : @admin_min_width;
+  overflow-y     : hidden;
+  display        : flex;
+  justify-content: space-between;
+
+  .left_menu {
+    width     : @menu_width;
+    height    : 100vh;
+    overflow-y: auto;
+    background: #fff;
+  }
+
+  .content_box {
+    width         : calc(100% - @menu_width);
+    height        : 100vh;
+    overflow-y    : auto;
+    background: @admin_background_color;
+    box-sizing    : border-box;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+
+    .content_header {
+      width: 100%;
+      flex : 0 0 auto;
+    }
+
+    // 路由内容盒子
+    .content_route_page {
+      width  : 100%;
+      flex   : 1 0 auto;
+      padding: 0.9375rem 0.9375rem 0 0.9375rem;
+      padding-bottom: 50px;
+    }
+
+    // 管理界面页脚
+    .admin_footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      flex : 0 0 auto;
+    }
+  }
+}
+
+// 分页器样式
+.Pagination_bar {
+  margin-top: 20px;
+  position  : relative;
+
+  .ant-pagination {
+    float       : right;
+    margin-right: -8px;
+  }
+}
+
+// 每页业务逻辑文本区
+.test_text {
+  padding: 10px;
+  border : 1px solid rgb(202, 202, 202);
+}
+
+// 搜索框
+.search_box {
+  display: flex;
+
+  .search_input {
+    height      : 32px;
+    overflow    : hidden;
+    margin-right: 10px;
+  }
+
+  .search_btn {
+    height                   : 32px;
+    border-top-left-radius   : 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+// 论文选题-对话框文本
+.Modal_span_text {
+  line-height: 2rem;
+}
+
+// 设置下边距
+.row_p {
+  margin-bottom: 1.25rem;
+}
+
+// 设置所有card
+.card {
+  margin-bottom: 1.25rem;
+}
+
+// 登录过期提示框
+.loginExpiredBox {
+  height    : 300px;
+  text-align: center;
+
+  .expiredIcon {
+    font-size: 60px;
+    color    : @error_color;
+  }
+
+  .expiredTip {
+    font-size: 20px;
+    color    : @error_color;
+  }
+
+  .expiredItem {
+    margin-top: 45px;
+  }
+}
+
+// 自定义所有ant-card样式
+.ant-card {
+  border-radius: 5px;
+}
+
+// 用户信息头像
+.user_info_tx {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+// 教师论文提交情况-右上角按钮区
+.thesis_scoring .right_top_bar_item {
+  margin-left: 15px;
+}

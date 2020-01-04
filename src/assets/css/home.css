@@ -1,0 +1,11 @@
+.ant-carousel .slick-slide {
+  text-align: center;
+  background: #364d79;
+  overflow: hidden;
+}
+.home_box .home_carousel {
+  width: 100%;
+}
+.home_box .home_carousel img {
+  width: 100%;
+}

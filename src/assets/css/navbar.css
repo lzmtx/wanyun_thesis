@@ -1,0 +1,30 @@
+.nav_bar_box {
+  width: 100%;
+  min-width: 960px;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #e2e2e2;
+}
+.nav_bar_box .nav_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 960px;
+  height: 100%;
+  margin-left: calc(-550%);
+}
+.nav_bar_box .nav_bar li {
+  float: left;
+}
+.nav_bar_box .nav_bar .left_logo_box {
+  width: 260px;
+}
+.nav_bar_box .nav_bar .left_logo_box img {
+  width: 100%;
+}
+.nav_bar_box .nav_bar .middle_box li {
+  margin-right: 10px;
+}
+.nav_bar_box .nav_bar .right_user_box li {
+  margin-left: 10px;
+}

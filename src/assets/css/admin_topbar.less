@@ -1,0 +1,42 @@
+@import './public_variable.less';
+
+.topbar_box {
+  height         : 70px;
+  background     : #fff;
+  padding        : 0 20px;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  border-bottom  : 1px solid #ececec;
+
+  .left {
+    font-size: 1.375rem;
+  }
+
+  .right {
+    font-size: 1.0625rem;
+    display  : inherit;
+
+    a {
+      color: rgba(0, 0, 0, 0.65);
+    }
+
+    >div {
+      display     : flex;
+      align-items : center;
+      margin-left : 25px;
+      padding-left: 25px;
+      border-left : 1px solid rgb(206, 206, 206);
+    }
+
+    >div img {
+      width        : 35px;
+      border-radius: 50%;
+      margin-right : 5px;
+    }
+
+    div:first-child {
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.card {
+  margin-bottom: 15px;
+}
+.card .tabpane {
+  padding-top: 10px;
+}
+.card_box {
+  width: 100%;
+}
+.card_box .card_content_box > input {
+  width: 300px;
+  margin-right: 20px;
+  float: left;
+}
+.card_box .card_content_box > button {
+  float: left;
+}
+.card_box .card_content_box .form_box > input {
+  width: 300px;
+  margin-right: 20px;
+  float: left;
+}
+.card_box .card_content_box .form_box > button {
+  float: left;
+}

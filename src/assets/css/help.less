@@ -1,0 +1,20 @@
+@import './help_child.less';
+
+.self {
+  height: 1500px;
+  border: 1px solid red;
+}
+.self::after{
+  content: "我是后伪元素";
+  height: 60px;
+  line-height: 60px;
+  display: block;
+  border: 1px solid green;
+}
+.self::before{
+  content: "我是前伪元素";
+  height: 60px;
+  line-height: 60px;
+  display: block;
+  border: 1px solid yellow;
+}

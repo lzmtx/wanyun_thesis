@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="shortcut icon" href="%PUBLIC_URL%/wylwxt_icon.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/reset.css">
+  <link rel="stylesheet" href="%PUBLIC_URL%/self.css">
+  <title>万云论文查重管理系统</title>
+  <style>
+    #ieTip {
+      display: none;
+      height: 100px;
+      min-height: 100px;
+      color: red;
+      font-size: 1.875rem;
+      text-align: center;
+      line-height: 100px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <div id="ieTip"></div>
+
+  <script>
+    function isIE() {
+      if (!!window.ActiveXObject || "ActiveXObject" in window) {
+        var child = document.getElementById("root")
+        child.parentNode.removeChild(child)
+        document.getElementById("ieTip").style.display = 'block'
+        document.getElementById("ieTip").innerHTML = "请勿使用 IE 浏览器访问！"
+          + '<a target="_blank" href="https://www.google.cn/intl/zh-CN/chrome/">推荐使用Chrome浏览器</a>'
+        console.log("Is IE")
+        return true;
+      } else {
+        var child = document.getElementById("ieTip")
+        child.parentNode.removeChild(child)
+        console.log("Not IE")
+        return false;
+      }
+    }
+    isIE()
+  </script>
+</body>
+
+</html>

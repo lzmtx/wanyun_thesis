@@ -1,0 +1,121 @@
+// 后台-数据分析页面样式
+.data_analysis_box {
+
+  .admin_self_card {
+    margin-right: 20px;
+    flex        : 1 0 auto;
+  }
+
+  .admin_self_card:last-child {
+    margin-right: 0;
+  }
+
+  .admin_card {
+    background   : #fff;
+    border-radius: 5px;
+    padding      : 15px;
+    margin-bottom: 20px;
+  }
+
+  .top_card {
+    color         : #fff;
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+    background    : linear-gradient(to right, #ff9b57, #FED883);
+    position      : relative;
+    overflow      : hidden;
+
+    .title_box {
+      width          : 100%;
+      display        : flex;
+      justify-content: space-between;
+
+      .title {
+        font-size: 17px;
+      }
+
+      .icon_box {
+        font-size: 26px;
+      }
+    }
+
+    .data_box {
+      width: 100%;
+      font-size: 16px;
+
+      .data {
+        font-size   : 32px;
+        margin-right: 5px;
+      }
+    }
+
+    // 波浪特效
+    .bolang {
+      position           : absolute;
+      top                : 65px;
+      left               : 0;
+      width              : 100%;
+      height             : 100%;
+      opacity            : 0.4;
+      background         : url("../img/bolang.png") no-repeat;
+      background-position: bottom center;
+      background-size    : 100% auto;
+    }
+  }
+
+
+  .top_card:nth-child(2) {
+    background: linear-gradient(to right, #FF6465, #FE7075);
+  }
+
+  .top_card:nth-child(3) {
+    background: linear-gradient(to right, #3790F6, #70D8F9);
+  }
+
+  .top_card:nth-child(4) {
+    background: linear-gradient(to right, #8479F8, #B39CFF);
+  }
+
+  .top_card_box {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+  }
+
+
+  // 最新消息
+  .news_box {
+    display: flex;
+    align-items: center;
+
+    .news_icon {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+    .news_content {
+      font-size: 16px;
+    }
+  }
+  
+  // 图表区
+  .one_charts {
+    width          : 100%;
+    display        : flex;
+    justify-content: space-between;
+
+    .charts_item {
+      flex        : 1 0 auto;
+      margin-right: 20px;
+    }
+
+    .charts_item:last-child {
+      margin-right: 0;
+    }
+
+
+    .react_for_echarts {
+      // border: 1px solid red;
+    }
+  }
+}

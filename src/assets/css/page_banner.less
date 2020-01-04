@@ -1,0 +1,190 @@
+@import './public_variable.less';
+
+// 页面banner
+.page_banner {
+  min-width      : @main_width;
+  width          : 100%;
+  height         : 100%;
+  background     : @admin_color_three;
+  display        : flex;
+  justify-content: center;
+  position       : relative;
+  overflow       : hidden;
+
+  .bo_lang {
+    width   : 3000px;
+    height  : 100%;
+    position: absolute;
+    top     : 60px;
+    left    : 0px;
+  }
+
+  .bo_lang01 {
+    left               : -200px;
+    opacity            : 0.3;
+    background         : url("../img/banner/page_bolang_01.png") repeat-x;
+    background-size    : 120% auto;
+    background-position: bottom center;
+    animation          : toMoveOne 10s infinite;
+  }
+
+  .bo_lang02 {
+    opacity            : 0.3;
+    background         : url("../img/banner/page_bolang_02.png") repeat-x;
+    background-size    : 120% auto;
+    background-position: bottom center;
+    animation          : toMove 10s infinite;
+  }
+
+  .bo_lang03 {
+    top                : 150px;
+    opacity            : 0.2;
+    background         : url("../img/banner/page_bolang_03.png") repeat-x;
+    background-size    : 100% auto;
+    background-position: bottom center;
+    animation          : toMove 15s infinite;
+  }
+
+  .bo_lang04 {
+    top                : 110px;
+    opacity            : 0.1;
+    background         : url("../img/banner/page_bolang_04.png") repeat-x;
+    background-size    : 100% auto;
+    background-position: bottom center;
+    animation          : toMoveOne 15s infinite;
+  }
+
+  @keyframes toMove {
+    50% {
+      left: -300px;
+    }
+  }
+
+  @keyframes toMoveOne {
+    50% {
+      left: -800px;
+    }
+  }
+
+  // 内容盒子
+  .content {
+    width      : @main_width;
+    height     : 100%;
+    display    : flex;
+    align-items: center;
+    z-index    : 99;
+
+    .title {
+      padding: 0 0 40px 10px;
+      color  : #fff;
+
+      >div {
+        margin-bottom: 30px;
+      }
+
+      >div:nth-child(1) {
+        font-size: 30px;
+      }
+
+      >div:nth-child(2) {
+        font-size: 22px;
+      }
+
+      >div:nth-child(3) {
+
+        .btn_div {
+          display        : flex;
+          justify-content: flex-start;
+
+          a {
+            padding      : 10px 50px 10px 50px;
+            border-radius: 10px;
+            font-size    : 20px;
+            color        : #fff;
+            background   : #70D8F9;
+            background   : linear-gradient(to right, #50B0F7, #70D8F9);
+          }
+        }
+      }
+    }
+
+  }
+
+  // 方块图片定位
+  .banner_box_item {
+    width              : 500px;
+    height             : 100%;
+    position           : absolute;
+    top                : 100px;
+    right              : 10%;
+    background         : url("../img/banner/banner_box_item.png") no-repeat;
+    background-size    : auto 300px;
+    background-position: center 200px;
+
+    .banner_item {
+      position     : absolute;
+      border-radius: 50%;
+      box-sizing   : border-box;
+      overflow     : hidden;
+      border       : 10px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .banner_item div {
+      width          : 100%;
+      height         : 100%;
+      color          : #fff;
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+      background     : linear-gradient(#77B9F7, #BBB1FD);
+    }
+
+    @keyframes upDown01 {
+      50% {
+        top: 130px;
+      }
+    }
+
+    @keyframes upDown02 {
+      50% {
+        top: 270px;
+      }
+    }
+
+    @keyframes upDown03 {
+      50% {
+        top: 240px;
+      }
+    }
+
+    .item01 {
+      font-size      : 3rem;
+      top            : 170px;
+      left           : 200px;
+      width          : 140px;
+      height         : 140px;
+      animation      : upDown01 4s infinite;
+      animation-delay: 2s;
+    }
+
+    .item02 {
+      font-size      : 1.5rem;
+      top            : 300px;
+      left           : -70px;
+      width          : 90px;
+      height         : 90px;
+      animation      : upDown02 5s infinite;
+      animation-delay: -1s;
+    }
+
+    .item03 {
+      font-size      : 1.8rem;
+      top            : 260px;
+      right          : -60px;
+      width          : 110px;
+      height         : 110px;
+      animation      : upDown03 3s infinite;
+      animation-delay: 0.5s;
+    }
+  }
+}

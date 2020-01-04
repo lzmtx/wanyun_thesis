@@ -1,0 +1,68 @@
+@import './public_variable.less';
+
+// 首页导航栏外层盒子
+.nav_bar_box {
+  width: @main_width;
+  height: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  // border-bottom: 1px solid rgb(226, 226, 226);
+
+  // 导航栏
+  .nav_bar {
+    width: 100%;
+    height: 100%;
+    min-width: @min_width;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo_box {
+      width: 220px;
+      height: 45px;
+      background: @colour_logo;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    .nav_box nav {
+      height: 79px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+
+      .item_link {
+        color: #565656;
+        line-height: 80px;
+        padding: 0 25px;
+      }
+      .item_link:hover {
+        border-bottom: 3px solid #565656;
+      }
+    }
+
+    .user nav {
+      display: flex;
+      align-items: center;
+
+      .nav_item {
+        margin-left: 25px;
+        color: #565656;
+      }
+    }
+  }
+}
+
+// 选中状态
+.action {
+  border-bottom: 3px solid #565656;
+}
+
+// 顶部导航栏定位
+.nav_bar_fixed {
+  position: fixed;
+  top: 0;
+  opacity: 0.98;
+  transition: 0.8s;
+}

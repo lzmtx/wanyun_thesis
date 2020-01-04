@@ -1,0 +1,16 @@
+.left_nav_box {
+  width: 100%;
+}
+.left_nav_box .admin_logo_box {
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  background: #1da57a;
+  border-bottom: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+}
+.left_nav_box .admin_logo_box img {
+  width: 85%;
+}

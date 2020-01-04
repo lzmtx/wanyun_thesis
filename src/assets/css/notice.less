@@ -1,0 +1,91 @@
+@import './public_variable.less';
+
+// 公告列表盒子
+.list_content {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+
+  // 公告列表
+  .list {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 300px;
+    border: 1px solid #f2f2f2;
+    border-left: none;
+    border-bottom: none;
+    position: relative;
+
+    #notice_list {
+      width: 280px;
+      overflow: hidden;
+
+      .list_item {
+        padding: 0 15px 0 5px;
+        display: flex;
+        font-size: 1rem;
+        line-height: 2rem;
+        margin-bottom: 2px;
+        cursor: pointer;
+        justify-content: space-between;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: bold;
+      }
+      .list_item:hover {
+        transition: 0.5s;
+        color: @link_color;
+        background: @transparent_bg;
+        border-left: 3px solid @link_color;
+      }
+    }
+  }
+  // 公告内容
+  .notice {
+    width: calc(@main_width - 300px);
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #f2f2f2;
+    border-bottom: none;
+
+    .notice_title {
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.25rem;
+      margin: 10px 0 15px 0;
+    }
+    .author {
+      font-weight: bold;
+      height: 30px;
+      line-height: 30px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .notice_content {
+      font-size: 16px;
+      line-height: 30px;
+    }
+    .notice_footer {
+      margin: 100px 0 30px 0;
+      height: 30px;
+      line-height: 30px;
+      color: rgb(219, 219, 219);
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+// 列表选中项
+.select_notice_item {
+  color: @link_color;
+  background: @transparent_bg;
+  border-left: 3px solid @link_color;
+}
+
+// 公告列表定位
+.notice_list_fixed {
+  position: fixed;
+  top: 80px;
+}

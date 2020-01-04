@@ -1,0 +1,191 @@
+@import './public_variable.less';
+
+.home_box {
+  width    : 100%;
+  min-width: @main_width;
+  height   : 100%;
+
+
+  .home_nav {
+    position       : fixed;
+    top            : 0;
+    width          : 100%;
+    min-width      : @main_width;
+    height         : 80px;
+    display        : flex;
+    justify-content: center;
+    z-index        : 9999;
+
+    .nav_bar {
+      width          : 100%;
+      padding        : 20px 50px 15px 30px;
+      box-sizing     : border-box;
+      display        : flex;
+      align-items    : center;
+      justify-content: space-between;
+      color          : #fff;
+      font-size      : 1.2em;
+
+      .left {
+        .logo_box {
+          width            : 220px;
+          height           : 50px;
+          background       : @logo_home;
+          background-size  : 100%;
+          background-repeat: no-repeat;
+        }
+      }
+
+      .right {
+        display        : flex;
+        justify-content: space-between;
+
+        .nav_item {
+          height     : 40px;
+          line-height: 40px;
+          padding    : 0 30px;
+          cursor     : pointer;
+        }
+
+        .nav_item span {
+          padding: 0 5px 3px 5px;
+        }
+
+        .nav_item:hover span {
+          transition   : 1s;
+          border-bottom: 2px solid #fff;
+        }
+
+        .nav_item .link {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  // 一页统一样式
+  .page {
+    width     : 100%;
+    height    : 100%;
+    box-sizing: border-box;
+
+    .content_box {
+      display        : flex;
+      align-items    : center;
+      justify-content: space-between;
+
+      .animate_item {
+        display: none;
+        width  : 520px;
+        height : 500px;
+        border : 5px solid red;
+      }
+    }
+  }
+
+  // .page:nth-child(odd) {
+  //   background: @admin_color_one;
+  // }
+
+  .page:nth-child(even) {
+    background: @admin_color_two;
+  }
+
+  // 产品特点
+  .features {
+    background     : #fff;
+    display        : flex;
+    align-items    : center;
+    flex-direction : column;
+    justify-content: flex-end;
+
+    .contentBox {
+      width              : 1200px;
+      height             : calc(100% - 80px);
+      box-sizing         : border-box;
+      background         : url("../img/home_features.png") no-repeat;
+      background-position: center center;
+      display            : flex;
+      justify-content    : space-between;
+
+      .item_box {
+        width          : 380px;
+        height         : 100%;
+        display        : flex;
+        flex-direction : column;
+        justify-content: space-between;
+
+        .item:first-child {
+          margin-top: 100px;
+        }
+
+        .item:last-child {
+          margin-bottom: 100px;
+        }
+
+        p {
+          font-weight: bold;
+          font-size  : 20px;
+        }
+
+        div {
+          font-size: 18px;
+        }
+      }
+
+      .item_box:first-child {
+        text-align: right;
+      }
+    }
+  }
+
+  // 报告演示
+  .report_presentation {
+    
+    display        : flex;
+    align-items    : center;
+    flex-direction : column;
+    justify-content: flex-end;
+
+    .presentation_box {
+      width              : 1000px;
+      height             : calc(100% - 80px);
+      background: url("../img/computer.png") no-repeat;
+      background-position: center center;
+      background-size: 100% auto;
+      padding: 102px 35px 0 35px;
+      z-index: 99;
+
+      .div_img {
+        width: 100%;
+        height: 61.5%;
+        z-index: 9;
+        background: url("../img/baogao.png") no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+
+
+  .mid_content {
+
+    .content_box {
+      height: 500px;
+    }
+
+  }
+}
+
+// 首页导航栏选中样式
+.selectNavItem {
+  span {
+    transition   : 1s;
+    border-bottom: 2px solid #fff;
+  }
+}
+
+// 导航栏主题色
+.nav_bar_themeColor {
+  transition: 0.8s;
+  background: #3593F5;
+}

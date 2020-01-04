@@ -1,0 +1,53 @@
+@import './public_variable.less';
+
+// 后台管理的页脚内容
+.footer_content_box {
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+
+  .admin_footer_animate {
+    width: 5000px;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    z-index: 9;
+    background: url("../img/blue_bolang.png") repeat-x;
+    background-size: auto 60px;
+    background-position: bottom;
+  }
+  .admin_footer_animate:nth-child(2) {
+    top: 25px;
+    left: 0px;
+    opacity: 0.7;
+    animation: toleft 30s infinite;
+    animation-delay: -1s;
+  }
+  .admin_footer_animate:nth-child(3) {
+    top: 10px;
+    left: -15px;
+    opacity: 0.4;
+    background-size: auto 80px;
+    background-position: top;
+    animation: toleft 35s infinite;
+    animation-delay: -5s;
+  }
+
+  @keyframes toleft {
+    50% {
+      left: -1500px;
+    }
+  }
+
+  .footer_content_text {
+    position: absolute;
+    bottom: -10px;
+    z-index: 99;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
