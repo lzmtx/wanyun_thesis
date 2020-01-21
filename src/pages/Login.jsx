@@ -43,6 +43,13 @@ class Login extends Component {
       })
     }
   }
+
+  // 一键登录
+  toLogin = async (user_id, user_pwd) => {
+    let res = await reqLogin(user_id, user_pwd)
+    this.setResultData(res)
+  }
+
   // 设置请求结果
   setResultData = (result) => {
     this.setState({ btn_loading: false })
@@ -127,6 +134,31 @@ class Login extends Component {
               </Button>
             </Form.Item>
           </Form>
+
+          {/* 添加一键登录，方便查看 */}
+          <div style={{
+            padding: '0 20px',
+            margin: '0 0 15px 0',
+            fontWeight: 'bold',
+          }}>
+            测试环境一键登录
+          </div>
+          <div className="test" style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            padding: '0 20px'
+          }}>
+            <Button type="primary" onClick={() => this.toLogin("20192019", "123")}>
+              学生
+            </Button>
+            <Button type="primary" onClick={() => this.toLogin("101013", "123")}>
+              教师
+            </Button>
+            <Button type="primary" onClick={() => this.toLogin("admin", "123")}>
+              管理员
+            </Button>
+          </div>
+
         </div>
       </div>
     )
