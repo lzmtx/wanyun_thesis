@@ -49,7 +49,7 @@ export default class AdminTopbar extends Component {
         </div>
         <div className="right">
           <div>
-            <Link to="/admin/userinfo"><img src={tx} />{memoryUtils.user.real_name}</Link>
+            <Link to="/admin/userinfo"><img src={tx} alt="" />{memoryUtils.user.real_name}</Link>
           </div>
           <div>
             <Link to="/" target="_blank">回到首页<Icon type="double-right" /></Link>
